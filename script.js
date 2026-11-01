@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "https://mental-health-score-h9uh.onrender.com";
+  const API_BASE = "location.protocol.startsWith("http") ? "" : "http://127.0.0.1:8000";";
 
   const form = document.getElementById("predict-form");
   const submitBtn = document.getElementById("submit-btn");
@@ -280,8 +280,7 @@
       renderResult(data.predicted_mental_health_score);
     } catch (err) {
       renderError(
-        "Can't reach the server",
-        `Couldn't connect to ${API_BASE}. Make sure the backend is running (uvicorn main:app --port 2200 --reload) and reachable from this page.`
+      "Can't reach the server", "Couldn't connect to the server. Please check your connection and try again in a moment."
       );
     } finally {
       setSubmitting(false);
