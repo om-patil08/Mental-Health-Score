@@ -1,4 +1,4 @@
-# Mental Health Signal
+# Mental Health Score.
 
 **A machine-learning web app that predicts a student's mental health score (0–10) from their social media habits, sleep, study time, physical activity, and stress level.**
 
